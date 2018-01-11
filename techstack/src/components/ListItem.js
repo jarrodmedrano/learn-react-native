@@ -60,10 +60,11 @@ const styles = {
   }
 };
 
+//object will show up as props on our component
 const mapStateToProps = (state, ownProps) => {
   const expanded = state.selectedLibraryId === ownProps.library.id;
 
   return { expanded };
 };
-
+//pass actions in as props
 export default connect(mapStateToProps, actions)(ListItem);
